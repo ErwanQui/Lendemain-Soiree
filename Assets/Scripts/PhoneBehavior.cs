@@ -2,6 +2,7 @@
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 using UnityEngine.UI;
+using UnityEngine.XR;
 
 
 public class PhoneBehavior : MonoBehaviour
@@ -116,25 +117,22 @@ public class PhoneBehavior : MonoBehaviour
                 angle += Input.GetAxis("Mouse ScrollWheel") * 2;
                 angle %= 2 * Mathf.PI;
                 SwitchButton(angle);
-            }
+                // Contrôle classique : espace, touche retour, et chiffres
+                if (Input.GetKeyUp(KeyCode.Space))
+                {
+                    AddNumber(idCurrentButton);
+                }
 
-            // Contrôle classique : espace, touche retour, et chiffres
-#if DEBUG
-            if(Input.GetKeyUp(KeyCode.Space))
-            {
-                AddNumber(idCurrentButton);
+                if (Input.GetKeyUp(KeyCode.Return))
+                {
+                    AddNumber(idCurrentButton);
+                }
+                for (int i = 0; i < 9; i++)
+                    if (Input.GetKeyUp(KeyCode.Alpha1 + i))
+                        AddNumber(i);
+                if (Input.GetKeyUp(KeyCode.Backspace))
+                    AddNumber(9);
             }
-
-            if (Input.GetKeyUp(KeyCode.Return))
-            {
-                AddNumber(idCurrentButton);
-            }
-            for (int i = 0; i < 9; i++)
-                if (Input.GetKeyUp(KeyCode.Alpha1 + i))
-                    AddNumber(i);
-            if (Input.GetKeyUp(KeyCode.Backspace))
-                AddNumber(9);
-#endif
 
             //On ajoute un nombre avec le bouton de la main gauche
             //device = Valve.VR.SteamVR_Controller.Input(Valve.VR.OpenVR.k_unTrackedDeviceIndex_Hmd);
