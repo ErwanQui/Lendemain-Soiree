@@ -763,7 +763,6 @@ namespace Valve.VR
                     componentName = child.name;
                     nameCache.Add(child.GetInstanceID(), componentName);
                 }
-
                 var componentState = new RenderModel_ComponentState_t();
                 if (!renderModels.GetComponentStateForDevicePath(renderModelName, componentName, SteamVR_Input_Source.GetHandle(inputSource), ref controllerModeState, ref componentState))
                     continue;

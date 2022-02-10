@@ -286,7 +286,7 @@ public class PhoneBehavior : MonoBehaviour
             screenText.color = Color.red;
             screenText.text = "Code \nfaux !";
         }
-        return trycode == code;
+        return (trycode == code);
     }
 
     /// <summary>
