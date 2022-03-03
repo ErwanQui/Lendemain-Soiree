@@ -747,7 +747,6 @@ namespace Valve.VR
         /// </summary>
         public virtual void Initialize()
         {
-            Debug.Log("1");
             inputSourceHandle = SteamVR_Input_Source.GetHandle(inputSource);
         }
     }
