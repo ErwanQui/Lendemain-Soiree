@@ -2377,11 +2377,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1068641582121852, guid: be584151e13f7ac459ffd0815bcad512, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1105489787365276, guid: be584151e13f7ac459ffd0815bcad512, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1247411190895646, guid: be584151e13f7ac459ffd0815bcad512, type: 3}
       propertyPath: m_IsActive
@@ -2421,7 +2421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1926502610092168, guid: be584151e13f7ac459ffd0815bcad512, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4206221036645350, guid: be584151e13f7ac459ffd0815bcad512, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7775,6 +7775,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655147242}
   m_Mesh: {fileID: 6061034527517944373, guid: b403832254ee92247bf52223ed8de490, type: 3}
+<<<<<<< Updated upstream
+=======
+--- !u!1 &1669225163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8996972754971989244, guid: b398fd2be00249840bdb3d4f23267cb7,
+    type: 3}
+  m_PrefabInstance: {fileID: 845335805}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1669225165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669225163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323952963c786384bbce26d31c691708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 4addec76ae6cfda4d87513d29d00652d, type: 3}
+  volume: 1
+  pitch: 0
+>>>>>>> Stashed changes
 --- !u!1 &1717031971
 GameObject:
   m_ObjectHideFlags: 0
