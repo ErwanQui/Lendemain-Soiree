@@ -25,7 +25,6 @@ public class ChestBehavior : MonoBehaviour
             key.GetComponent<Throwable>().enabled = false;
             key.GetComponent<Collider>().enabled = false;
             key.GetComponent<Rigidbody>().isKinematic = true;
-
             key.transform.parent.eulerAngles = new Vector3(0, 180, 90);
             key.transform.position = transform.position + transform.right / 10;
             key.transform.parent.SetParent(transform, true);

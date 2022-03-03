@@ -116,10 +116,10 @@ public class PhoneBehavior : MonoBehaviour
                     AddNumber(idCurrentButton);
                 }
                 for (int i = 0; i < 9; i++)
-                {
-                    if (Input.GetKeyUp(KeyCode.Alpha1 + i)) { AddNumber(i); }
-                }
-                if (Input.GetKeyUp(KeyCode.Backspace)) { AddNumber(9); }
+                    if (Input.GetKeyUp(KeyCode.Alpha1 + i))
+                        AddNumber(i);
+                if (Input.GetKeyUp(KeyCode.Backspace))
+                    AddNumber(9);
             }
         }
 
@@ -223,7 +223,8 @@ public class PhoneBehavior : MonoBehaviour
         // We use entire division to come back in ]-numButtons;numButtons[ interval 
         idCurrentButton -= idCurrentButton / numButtons * numButtons;
         // Then we clamp to [0; numButtons[
-        if (idCurrentButton < 0) { idCurrentButton += numButtons; }
+        if (idCurrentButton < 0)
+            idCurrentButton += numButtons;
         // Enfin, selon l'id du bouton, on fait l'échange de sélection entre les boutons
         if (idFormerButton != idCurrentButton)
         {
@@ -259,9 +260,11 @@ public class PhoneBehavior : MonoBehaviour
                 if (tryCode.text.Length < 4)
                 {
                     tryCode.text += id;
-                    if (tryCode.text.Length == 4) { TryUnlock(tryCode.text); }
+                    if (tryCode.text.Length == 4)
+                        TryUnlock(tryCode.text);
                 }
-                else { TryUnlock(tryCode.text); }
+                else
+                    TryUnlock(tryCode.text);
                 break;
         }
     }
@@ -286,7 +289,7 @@ public class PhoneBehavior : MonoBehaviour
             screenText.color = Color.red;
             screenText.text = "Code \nfaux !";
         }
-        return (trycode == code);
+        return trycode == code;
     }
 
     /// <summary>
@@ -304,7 +307,8 @@ public class PhoneBehavior : MonoBehaviour
 
     public void SetWheelActive(bool state)
     {
-        for (int i = 0; i < numButtons; i++) { instancedButtons[i].SetActive(state); }
+        for (int i = 0; i < numButtons; i++)
+            instancedButtons[i].SetActive(state);
     }
 
     /// <summary>

@@ -1571,7 +1571,6 @@ namespace Valve.VR
         /// <param name="deviceBindingToEdit">Optional. The device's binding to open (will default to right hand)</param>
         public static void OpenBindingUI(SteamVR_ActionSet actionSetToEdit = null, SteamVR_Input_Sources deviceBindingToEdit = SteamVR_Input_Sources.Any)
         {
-            Debug.Log("6");
             ulong deviceHandle = SteamVR_Input_Source.GetHandle(deviceBindingToEdit);
             ulong actionSetHandle = 0;
 
