@@ -338,11 +338,12 @@ namespace Valve.VR
             lastActive = active;
             lastAxis = axis;
             lastDelta = delta;
-
-            EVRInputError err = OpenVR.Input.GetAnalogActionData(handle, ref actionData, actionData_size, SteamVR_Input_Source.GetHandle(inputSource));
-            if (err != EVRInputError.None)
-                Debug.LogError("<b>[SteamVR]</b> GetAnalogActionData error (" + fullPath + "): " + err.ToString() + " handle: " + handle.ToString());
-
+            Debug.Log("enlèvement d(un message d'erreur qui appelait une fonction de VR - à réparer");
+            //EVRInputError err = OpenVR.Input.GetAnalogActionData(handle, ref actionData, actionData_size, SteamVR_Input_Source.GetHandle(inputSource));
+            //if (err != EVRInputError.None)
+            //{
+            //    Debug.LogError("<b>[SteamVR]</b> GetAnalogActionData error (" + fullPath + "): " + err.ToString() + " handle: " + handle.ToString());
+            //}
             updateTime = Time.realtimeSinceStartup;
             axis = new Vector2(actionData.x, actionData.y);
             delta = new Vector2(actionData.deltaX, actionData.deltaY);

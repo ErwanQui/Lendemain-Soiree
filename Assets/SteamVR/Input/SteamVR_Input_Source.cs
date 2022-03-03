@@ -26,16 +26,19 @@ namespace Valve.VR
         public static ulong GetHandle(SteamVR_Input_Sources inputSource)
         {
             int index = (int)inputSource;
+            Debug.Log(inputSourceHandlesBySource);
             if (index < inputSourceHandlesBySource.Length)
+            {
                 return inputSourceHandlesBySource[index];
-
+            }
             return 0;
         }
         public static SteamVR_Input_Sources GetSource(ulong handle)
         {
             if (inputSourceSourcesByHandle.ContainsKey(handle))
+            {
                 return inputSourceSourcesByHandle[handle];
-
+            }
             return SteamVR_Input_Sources.Any;
         }
 
