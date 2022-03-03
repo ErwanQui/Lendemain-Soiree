@@ -195,19 +195,24 @@ namespace Valve.VR
         public void Execute(float secondsFromNow, float durationSeconds, float frequency, float amplitude)
         {
             if (SteamVR_Input.isStartupFrame)
+            {
                 return;
-
+            }
             timeLastExecuted = Time.realtimeSinceStartup;
 
-            EVRInputError err = OpenVR.Input.TriggerHapticVibrationAction(handle, secondsFromNow, durationSeconds, frequency, amplitude, inputSourceHandle);
+            Debug.Log("enlèvement d'un message d'erreur qui appelait une fonction de vibration des mains en VR - à réparer");
+            //EVRInputError err = OpenVR.Input.TriggerHapticVibrationAction(handle, secondsFromNow, durationSeconds, frequency, amplitude, inputSourceHandle);
 
-            //Debug.Log(string.Format("[{5}: haptic] secondsFromNow({0}), durationSeconds({1}), frequency({2}), amplitude({3}), inputSource({4})", secondsFromNow, durationSeconds, frequency, amplitude, inputSource, this.GetShortName()));
+            ////Debug.Log(string.Format("[{5}: haptic] secondsFromNow({0}), durationSeconds({1}), frequency({2}), amplitude({3}), inputSource({4})", secondsFromNow, durationSeconds, frequency, amplitude, inputSource, this.GetShortName()));
 
-            if (err != EVRInputError.None)
-                Debug.LogError("<b>[SteamVR]</b> TriggerHapticVibrationAction (" + fullPath + ") error: " + err.ToString() + " handle: " + handle.ToString());
-
+            //if (err != EVRInputError.None)
+            //{
+            //    Debug.LogError("<b>[SteamVR]</b> TriggerHapticVibrationAction (" + fullPath + ") error: " + err.ToString() + " handle: " + handle.ToString());
+            //}
             if (onExecute != null)
+            {
                 onExecute.Invoke(vibrationAction, inputSource, secondsFromNow, durationSeconds, frequency, amplitude);
+            }
         }
     }
 
