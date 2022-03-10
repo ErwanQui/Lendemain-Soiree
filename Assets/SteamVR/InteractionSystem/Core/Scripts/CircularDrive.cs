@@ -1,4 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+﻿   //======= Copyright (c) Valve Corporation, All rights reserved. ===============
 //
 // Purpose: Interactable that can be used to move in a circular motion
 //
@@ -29,7 +29,7 @@ namespace Valve.VR.InteractionSystem
 		public Collider childCollider = null;
 
 		[Tooltip( "A LinearMapping component to drive, if not specified one will be dynamically added to this GameObject" )]
-		public LinearMapping linearMapping;
+		public LinearMapping linearMapping; 
 
 		[Tooltip( "If true, the drive will stay manipulating as long as the button is held down, if false, it will stop if the controller moves out of the collider" )]
 		public bool hoverLock = false;
@@ -126,7 +126,7 @@ namespace Valve.VR.InteractionSystem
         private void Awake()
         {
             interactable = this.GetComponent<Interactable>();
-        }
+		}
 
         //-------------------------------------------------
         private void Start()
