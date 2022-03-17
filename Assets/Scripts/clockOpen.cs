@@ -10,10 +10,12 @@ public class clockOpen : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(aiguille1.transform.rotation);
-        if (-125/180 < aiguille1.transform.rotation.z && aiguille1.transform.rotation.z < -115/180)
+        //Debug.Log(aiguille1.transform.eulerAngles.z);
+        if (230 < aiguille1.transform.rotation.eulerAngles.z && aiguille1.transform.rotation.eulerAngles.z < 250)
         {
-            if (-5/180 < aiguille2.transform.rotation.z && aiguille2.transform.rotation.z < 5/180)
+            Debug.Log("ouverttt");
+
+            if (350 < aiguille2.transform.rotation.eulerAngles.z || aiguille2.transform.rotation.eulerAngles.z < 10)
             {
                 //ouverture de la cloche
                 Debug.Log("ouvert");
