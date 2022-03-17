@@ -14048,6 +14048,75 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1001 &8721553734732791943
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8721553734212835595, guid: 242d25fb953fe354da08c98a99871334,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721553734212835595, guid: 242d25fb953fe354da08c98a99871334,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.774216
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721553734212835595, guid: 242d25fb953fe354da08c98a99871334,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0594964
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721553734212835595, guid: 242d25fb953fe354da08c98a99871334,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.334272
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721553734212835595, guid: 242d25fb953fe354da08c98a99871334,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721553734212835595, guid: 242d25fb953fe354da08c98a99871334,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721553734212835595, guid: 242d25fb953fe354da08c98a99871334,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721553734212835595, guid: 242d25fb953fe354da08c98a99871334,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721553734212835595, guid: 242d25fb953fe354da08c98a99871334,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721553734212835595, guid: 242d25fb953fe354da08c98a99871334,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721553734212835595, guid: 242d25fb953fe354da08c98a99871334,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721553734212835597, guid: 242d25fb953fe354da08c98a99871334,
+        type: 3}
+      propertyPath: m_Name
+      value: LED-PLANTS
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 242d25fb953fe354da08c98a99871334, type: 3}
 --- !u!1 &8904558106934704179
 GameObject:
   m_ObjectHideFlags: 0
