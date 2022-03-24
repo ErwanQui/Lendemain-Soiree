@@ -8,6 +8,9 @@ public class SonClocheCle : MonoBehaviour
     private GameObject instanciated_key;
     private bool Horloge_est_reglee;
     public GameObject clock;
+    public GameObject Cloche;
+    public GameObject ClocheUnlock;
+
 
     void Start()
     {
@@ -22,6 +25,8 @@ public class SonClocheCle : MonoBehaviour
     {
         if (clock.GetComponent<clockOpen>().opening)
         {
+            ClocheUnlock.SetActive(true);
+            Cloche.GetComponent<MeshFilter>().mesh = null;
             Horloge_est_reglee = true;
         }
         if (Horloge_est_reglee)
