@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Models/BROARD_LEAF_SUCCULENT_fbx.meta
 guid: 492a13c04200a5444b9cdb6257c6f845
+=======
+guid: b4ee42f8180e73a4982625774ab303cf
+>>>>>>> origin/Thomas_branch:Assets/Materials/Thomas.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
