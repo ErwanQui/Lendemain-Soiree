@@ -5,26 +5,30 @@ using UnityEngine;
 public class SonClocheCle : MonoBehaviour
 {
     private AudioSource son_key;
-    public GameObject key;
     private GameObject instanciated_key;
     private bool Horloge_est_reglee;
 
     void Start()
     {
         //instanciate();
-        //Horloge_est_reglee = false;
+        Horloge_est_reglee = false;
         son_key = gameObject.GetComponent<AudioSource>();
         instanciated_key = gameObject.transform.GetChild(0).gameObject;
+
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //Horloge_est_reglee = true;
-            //Debug.Log(Horloge_est_reglee);
+            Horloge_est_reglee = true;
+        }
+        if (Horloge_est_reglee)
+        {
             instanciated_key.SetActive(true);
             son_key.Play();
+            Horloge_est_reglee = false;
+            instanciated_key.transform.SetParent(null);
         }
 
     }
