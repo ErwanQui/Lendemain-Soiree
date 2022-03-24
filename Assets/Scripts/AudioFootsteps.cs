@@ -48,7 +48,6 @@ public class AudioFootsteps : MonoBehaviour
     void Update()
     {
         Application.Quit();
-        Debug.Log("pi");
 
         // S'il marche et qu'on a depasse nextTime
         if (true && Time.realtimeSinceStartup >= nextTime) playFootStep();
@@ -73,7 +72,6 @@ public class AudioFootsteps : MonoBehaviour
     {
         minutesParPas = 60 / pasParMinutes;
 
-        Debug.Log("pas");
         source.Play();
 
         speed = player.gameObject.GetComponent<Rigidbody>().velocity.magnitude;

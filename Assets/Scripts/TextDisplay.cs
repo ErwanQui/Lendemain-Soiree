@@ -57,7 +57,8 @@ public class TextDisplay : MonoBehaviour
     private void StartGame()
     {
         textObjects[0].text = "Vous vous réveillez dans une chambre inconnue...";
-        textObjects[0].text += "\nTrouvez le code du portable de votre hôte pour effacer les photos compromettantes et enfuyez vous !";
+        textObjects[0].text += "\nTrouvez le code du portable de votre hôte pour effacer les photos compromettantes.";
+        textObjects[0].text += "\nEt piratez ensuite l'ordinateur pour enfin vous enfuir !";
         firstText = true;
         startTime = Time.time;
     }

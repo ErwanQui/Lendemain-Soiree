@@ -7,6 +7,7 @@ public class SonClocheCle : MonoBehaviour
     private AudioSource son_key;
     private GameObject instanciated_key;
     private bool Horloge_est_reglee;
+    public GameObject clock;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class SonClocheCle : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (clock.GetComponent<clockOpen>().opening)
         {
             Horloge_est_reglee = true;
         }
