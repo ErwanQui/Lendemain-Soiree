@@ -280,7 +280,7 @@ public class PhoneBehavior : MonoBehaviour
             isLocked = false;
             screenText.color = Color.green;
             screenText.text = "Code\nbon";
-            message.EndGame();
+            message.MidGame();
         }
         else
         {

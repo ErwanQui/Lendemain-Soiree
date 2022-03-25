@@ -7,11 +7,15 @@ public class TextDisplay : MonoBehaviour
     Text[] textObjects;
 
     bool firstText = false;
+    bool midText = false;
     public EventTrigger.TriggerEvent onGameStart = null;
 
     [Tooltip("Time (in seconds) during which the text is displayed.")]
     public float textDisplayDuration;
     private float startTime;
+
+    private float midtextDisplayDuration = 3;
+    private float midTime;
 
     private Color initialColor;
     private GameObject mainCamera;
@@ -46,7 +50,18 @@ public class TextDisplay : MonoBehaviour
                 textObjects[0].color = initialColor;
                 firstText = false;
                 if (onGameStart != null)
+                {
                     onGameStart.Invoke(null);
+                }
+            }
+        }
+        else if (midText)
+        {
+            if (Time.time > midTime + midtextDisplayDuration)
+            { 
+                textObjects[0].text = "";
+                textObjects[0].color = initialColor;
+                midText = false;
             }
         }
     }
@@ -66,11 +81,13 @@ public class TextDisplay : MonoBehaviour
     /// <summary>
     /// Affiche le texte de fin de partie
     /// </summary>
-    public void EndGame()
+    public void MidGame()
     {
         textObjects[0].fontSize = 40;
         textObjects[0].color = Color.green;
-        textObjects[0].text = "Vous avez effacé toutes les photos comprometantes !";
+        textObjects[0].text = "Vous avez effacé toutes les photos compromettantes !";
+        midText = true;
+        midTime = Time.time;
     }
 
     public void OnGameOver(BaseEventData arg)
