@@ -11789,8 +11789,8 @@ PrefabInstance:
     - target: {fileID: 4778988934883391245, guid: 892556cf88f49064590d33f512c1207b,
         type: 3}
       propertyPath: m_Text
-      value: "Le nombre de r\xE9p\xE9titions d'une couleur donne le tableau donne
-        son chiffre."
+      value: "Le nombre de r\xE9p\xE9titions d'une couleur sur le tableau donne son
+        chiffre."
       objectReference: {fileID: 0}
     - target: {fileID: 5509916373320826566, guid: 892556cf88f49064590d33f512c1207b,
         type: 3}
