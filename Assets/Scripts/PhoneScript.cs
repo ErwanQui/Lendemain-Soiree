@@ -88,7 +88,7 @@ public class PhoneScript : MonoBehaviour
 
         if (RenderSettings.fogDensity != 1.0f)
         {
-            RenderSettings.fogDensity += 0.05f;
+            RenderSettings.fogDensity += 0.02f;
             nextTime = Time.realtimeSinceStartup + spb;
         }
         else

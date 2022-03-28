@@ -10,6 +10,7 @@ public class SonClocheCle : MonoBehaviour
     public GameObject clock;
     public GameObject Cloche;
     public GameObject ClocheUnlock;
+    private bool firstTime = true;
 
 
     void Start()
@@ -29,11 +30,12 @@ public class SonClocheCle : MonoBehaviour
             Cloche.GetComponent<MeshFilter>().mesh = null;
             Horloge_est_reglee = true;
         }
-        if (Horloge_est_reglee)
+        if (Horloge_est_reglee && firstTime)
         {
             key.SetActive(true);
             son_key.Play();
             Horloge_est_reglee = false;
+            firstTime = false;
             //instanciated_key.transform.SetParent(null);
         }
 
